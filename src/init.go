@@ -10,17 +10,18 @@ func init() {
     http.HandleFunc("/", handler)
 }
 
-func eccles() string{
+func eccles() string {
 	today := time.Now().Weekday()
 	switch time.Friday {
-	case today + 0:
-		return "Today."
-	case today + 1:
-		return "Tomorrow."
-	case today + 2:
-		return "In two days."
-	default:
-		return "Too far away."
+  	case today + 0:
+  		return "Today."
+  	case today + 1:
+  		return "Tomorrow."
+  	case today + 2:
+  		return "In two days."
+  	default:
+  		return "Too far away."
+    }
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
