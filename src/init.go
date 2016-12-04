@@ -25,6 +25,6 @@ func eccles() string {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "When's Friday?")
+    fmt.Fprint(w, "When's Friday? ")
     fmt.Fprint(w, eccles())
 }
