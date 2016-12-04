@@ -25,19 +25,17 @@ func eccles() string {
 }
 
 func header() string {
-  return ` <html>
-                    <head>
-                      <link rel="stylesheet" type="text/css" href="style.css">
-                      <meta charset="UTF-8">
-                        <title>When is Friday?</title>
-                      <meta property="fb:admins" content="3500652">
-                    </head>`
+  return `<html>
+            <head>
+              <link rel="stylesheet" type="text/css" href="style.css">
+              <meta charset="UTF-8">
+                <title>When is Friday?</title>
+              <meta property="fb:admins" content="3500652">
+            </head>`
 }
 
 func body() string {
-  return `<body>`
-            + eccles() +
-          `</body>`
+  return "<body>" + eccles() + "</body>"
 }
 
 func footer() string {
