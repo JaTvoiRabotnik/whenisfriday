@@ -1,0 +1,8 @@
+{
+  "project_name": "When Is Friday - Go",
+  "project_description": "A simple stupid webpage for learning to code in Go.",
+  "show_files": [
+    "src/init.go",
+    "app.yaml"
+  ]
+}
