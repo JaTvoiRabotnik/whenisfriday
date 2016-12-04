@@ -24,7 +24,28 @@ func eccles() string {
     }
 }
 
+func header() string {
+  return " <html>
+                    <head>
+                      <link rel="stylesheet" type="text/css" href="style.css">
+                      <meta charset="UTF-8">
+                        <title>When is Friday?</title>
+                      <meta property="fb:admins" content="3500652">
+                    </head>"
+}
+
+func body() string {
+  return "<body>
+            <h1>" + eccles() + "</h1>
+          </body>"
+}
+
+func footer() string {
+  return "</html>"
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "When's Friday? ")
-    fmt.Fprint(w, eccles())
+    fmt.Fprint(w, header())
+    fmt.Fprint(w, body())
+    fmt.Fprint(w, footer())
 }
