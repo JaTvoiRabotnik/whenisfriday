@@ -14,13 +14,13 @@ func eccles() string {
 	today := time.Now().Weekday()
 	switch time.Friday {
   	case today + 0:
-  		return "Today."
+  		return `<h1 class="yes">Today.</h1>`
   	case today + 1:
-  		return "Tomorrow."
+  		return `<h1 class="yes">Tomorrow.</h1>`
   	case today + 2:
-  		return "In two days."
+  		return `<h1 class="maybe">In two days.</h1>`
   	default:
-  		return "Too far away."
+  		return `<h1 class="no">Too far away.</h1>`
     }
 }
 
@@ -35,9 +35,9 @@ func header() string {
 }
 
 func body() string {
-  return `<body>
-            <h1>` + eccles() + `</h1>
-          </body>`
+  return `<body>`
+            + eccles() +
+          `</body>`
 }
 
 func footer() string {
